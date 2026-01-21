@@ -6,6 +6,9 @@ file_names = ['/workspaces/create-a-gif-with-python/images/IMG_20251224_102014.j
 
 images = []
 
+# Write images to the buffer instead of files
+
+iio.imwrite(gif_buffer, file_names, extension=".gif", duration=500, loop=0)
 # Load first image to get a reference size
 first_img = iio.imread(file_names[0])
 target_size = (first_img.shape[1], first_img.shape[0]) # (width, height)
